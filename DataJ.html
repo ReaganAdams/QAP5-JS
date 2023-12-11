@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read JSON from Disk</title>
+</head>
+<body>
+  <script>
+    // Using fetch to read the JSON file 
+   // FETCH and READ the people.json disk file
+ fetch('.QAP5.js')
+  .then(response => response.json())
+   .then(person => {
+     
+     console.log(person[0].fname);
+
+     // Loop through an array in the JSON data
+    person.forEach(person => {
+      console.log(`ID: ${record.id}, Name: ${record.name}, Age: ${record.age}`); 
+     });
+   })
+   .catch(error => {
+    // Handle any errors that occur while fetching the file
+    console.error(error);
+   });
+   </script>
+</body>
+</html>
